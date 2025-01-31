@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$AQUASOL Analytics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script src="js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Ocean Ambience Elements -->
+    <div class="ocean-overlay"></div>
+    <div class="deep-sea-particles"></div>
+    
+    <!-- Dynamic Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <!-- Enhanced Loading Screen -->
+    <div class="loading-screen">
+        <div class="depth-layers">
+            <div class="depth-layer"></div>
+            <div class="depth-layer"></div>
+            <div class="depth-layer"></div>
+        </div>
+        
+        <div class="logo-container">
+            <div class="logo-ring-outer"></div>
+            <div class="logo-ring"></div>
+            <div class="logo-core">
+                <span class="dollar">$</span>
+            </div>
+        </div>
+
+        <div class="brand-text">
+            <div class="text-reveal">
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">A</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">Q</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">U</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">A</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">S</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">O</span>
+                </div>
+                <div class="letter-container">
+                    <div class="letter-glow"></div>
+                    <span class="letter">L</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-wrapper">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="ocean-token-brand">
+                    <div class="brand-glow"></div>
+                    <h1 class="ocean-title">
+                        <span class="dollar-sign">$</span>AQUA<span class="token-suffix">SOL</span>
+                    </h1>
+                    <div class="coral-accent"></div>
+                </div>
+                
+                <nav class="main-nav">
+                    <div class="nav-background"></div>
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#trending">Trending</a></li>
+                        <li><a href="#graduated">Graduated</a></li>
+                        <div class="nav-indicator"></div>
+                    </ul>
+                    <div class="nav-glow"></div>
+                </nav>
+
+                <div class="header-actions">
+                    <svg class="social-icon x-logo" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.2 2h2.8l-6 6.8L19 17h-5.8l-4.3-5.7L4.2 17H1.4l6.4-7.3L1 2h6l3.9 5.2L15.2 2zM14.2 15.5h1.5L5.9 3.4H4.3l9.9 12.1z"/>
+                    </svg>
+                    
+                    <svg class="social-icon telegram" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.92 4.152a1.44 1.44 0 0 0-1.38-1.164c-.336-.024-1.08.168-7.404 2.76l-6.936 1.5c-.9.36-1.02 1.14-1.008 1.428.024.288.216 1.044 1.116 1.356l2.844.9c.204.648.912 2.88 1.104 3.444.144.42.288.552.396.624a.408.408 0 0 0 .24.072c.204 0 .36-.12.516-.216l2.124-1.944 2.784 2.28c.276.216.552.336.804.336.168 0 .324-.048.468-.144.3-.192.48-.528.516-.984l1.44-11.448c.096-.552-.024-.996-.324-1.2z"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="content-container">
+                <div class="timeframe-controls-wrapper">
+                    <div class="timeframe-controls">
+                        <div class="timeframe-pills">
+                            <button class="timeframe-pill active" data-time="5m">5M</button>
+                            <button class="timeframe-pill" data-time="15m">15M</button>
+                            <button class="timeframe-pill" data-time="1h">1H</button>
+                            <button class="timeframe-pill" data-time="6h">6H</button>
+                            <button class="timeframe-pill" data-time="24h">24H</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="token-section-wrapper">
+                    <section id="trending" class="token-section">
+                        <div class="token-grid" id="trending-tokens"></div>
+                    </section>
+                </div>
+            </div>
+
+            <section id="graduated" class="token-section">
+                <div class="graduated-header">
+                    <div class="title-group">
+                        <h1>Graduated Tokens</h1>
+                        <div class="header-stats">
+                            <div class="header-stat">
+                                <span class="stat-label">Total Value</span>
+                                <span class="stat-value">$2.4B</span>
+                            </div>
+                            <div class="header-stat">
+                                <span class="stat-label">24h Volume</span>
+                                <span class="stat-value">$324.5M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort-control">
+                        <div class="sort-button">
+                            <span class="sort-label">Market Cap</span>
+                            <svg class="sort-icon" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M8 10L4 6h8l-4 4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="token-grid" id="graduated-tokens"></div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>© 2024 Solana Analytics</p>
+                    <p>Real-time data powered by <span class="highlight">Solana Tracker</span></p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">API</a>
+                </div>
+            </div>
+            <div class="footer-glow"></div>
+        </footer>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Loading Screen Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const loadingScreen = document.querySelector('.loading-screen');
+        const mainHeader = document.querySelector('.main-header');
+        const logoRingOuter = document.querySelector('.logo-ring-outer');
+        const logoRing = document.querySelector('.logo-ring');
+        const logoCore = document.querySelector('.logo-core');
+        const letters = document.querySelectorAll('.letter-container');
+        
+        // Initially hide header
+        mainHeader.style.opacity = '0';
+        mainHeader.style.transform = 'translateY(-20px)';
+        
+        // Ensure loading screen is visible initially
+        loadingScreen.style.opacity = '1';
+        loadingScreen.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
+        
+        // Start animation sequence
+        setTimeout(() => {
+            // Animate logo elements
+            logoRingOuter.style.opacity = '0.3';
+            logoRing.style.opacity = '1';
+            logoCore.style.opacity = '1';
+            
+            // Animate letters with cascading effect
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.classList.add('reveal');
+                }, 400 + (index * 200));
+            });
+            
+            // Fade out loading screen and show header
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                
+                // Show header with slight delay after loading screen starts fading
+                setTimeout(() => {
+                    mainHeader.classList.add('visible');
+                }, 750);
+                
+                // Remove loading screen from DOM
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 1500);
+            }, 2500);
+        }, 500);
+        
+        // Track mouse movement for dynamic glow effects
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const x = (clientX / window.innerWidth) * 100;
+            const y = (clientY / window.innerHeight) * 100;
+            
+            document.documentElement.style.setProperty('--x', `${x}%`);
+            document.documentElement.style.setProperty('--y', `${y}%`);
+        });
+
+        // Add mouse movement tracking for cards
+        const cards = document.querySelectorAll('.token-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / card.offsetWidth) * 100;
+                const y = ((e.clientY - rect.top) / card.offsetHeight) * 100;
+                
+                // Update CSS variables for glow effect
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+                
+                // Add subtle rotation
+                const rotateX = (y - 50) * 0.1;
+                const rotateY = (x - 50) * 0.1;
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${-rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    translateZ(10px)
+                `;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+    });
+    </script>
+
+    <script>
+    // Remove scroll behavior
+    document.removeEventListener('scroll', () => {});
+
+    // Enhanced navigation interactivity
+    const nav = document.querySelector('.main-nav');
+    const navLinks = nav.querySelectorAll('a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', (e) => {
+            const rect = link.getBoundingClientRect();
+            const x = ((rect.left + rect.right) / 2) - nav.getBoundingClientRect().left;
+            const y = ((rect.top + rect.bottom) / 2) - nav.getBoundingClientRect().top;
+            
+            nav.style.setProperty('--x', `${x}px`);
+            nav.style.setProperty('--y', `${y}px`);
+        });
+    });
+
+    nav.addEventListener('mouseleave', () => {
+        nav.style.setProperty('--x', '50%');
+        nav.style.setProperty('--y', '50%');
+    });
+
+    // Brand hover effect
+    const brand = document.querySelector('.ocean-token-brand');
+    brand.addEventListener('mouseenter', () => {
+        brand.style.transform = 'translateY(-2px)';
+        const glow = brand.querySelector('.brand-glow');
+        glow.style.opacity = '0.5';
+    });
+
+    brand.addEventListener('mouseleave', () => {
+        brand.style.transform = 'translateY(0)';
+        const glow = brand.querySelector('.brand-glow');
+        glow.style.opacity = '0';
+    });
+
+    // Smooth scroll for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const headerHeight = document.querySelector('.main-header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html> 
