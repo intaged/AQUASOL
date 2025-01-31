@@ -22,7 +22,7 @@ A real-time analytics dashboard for tracking Solana token metrics with a premium
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/intaged/AQUASOL.git
    ```
 
 2. Install dependencies:
