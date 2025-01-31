@@ -1497,11 +1497,10 @@ body::before {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 0.75rem 1.25rem;
-    background: rgba(0, 26, 46, 0.4);
+    gap: 1rem;
+    padding: 0.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(0, 255, 238, 0.1);
+    background: rgba(0, 26, 46, 0.4);
 }
 
 /* X logo specific styles */
@@ -1780,11 +1779,10 @@ body::before {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 0.75rem 1.25rem;
-    background: rgba(0, 26, 46, 0.4);
+    gap: 1rem;
+    padding: 0.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(0, 255, 238, 0.1);
+    background: rgba(0, 26, 46, 0.4);
 }
 
 .header-actions .social-icon {
@@ -2411,7 +2409,7 @@ body::before {
 /* Social Icons Enhancement */
 .header-actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -3904,4 +3902,47 @@ body::before {
     .letter {
         font-size: 3rem;
     }
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(0, 255, 238, 0.05);
+    border: 1px solid rgba(0, 255, 238, 0.1);
+}
+
+.social-link:hover {
+    background: rgba(0, 255, 238, 0.1);
+    border-color: rgba(0, 255, 238, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(0, 255, 238, 0.1);
+}
+
+.social-link:active {
+    transform: translateY(0);
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(0, 255, 238, 0.4));
+}
+
+/* Update existing social icon styles */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background: rgba(0, 26, 46, 0.4);
 }
